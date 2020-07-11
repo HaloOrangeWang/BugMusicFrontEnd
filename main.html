@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" xmlns="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>BUG Music</title>
+<!--    <link rel="stylesheet" href="style/animate.min.css" />-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="style/mainwindow.css" />
+<!--    <script src="js/jquery-3.5.1.js"></script>-->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="Page01" class="Page01">
+        <h5 id="TitleText" class="TitleText">将编程中遇到的BUG和异常写成一首歌</h5>
+        <img src="img/Page1Img1.png" alt="没有" id="Page1Img1" class="Page1Img1" hidden/>
+        <img src="img/Page1Img2.png" alt="没有" id="Page1Img2" class="Page1Img2" hidden/>
+        <img src="img/Page1Img3.png" alt="没有" id="Page1Img3" class="Page1Img3" hidden/>
+        <img src="img/Page1Img4.png" alt="没有" id="Page1Img4" class="Page1Img4" hidden/>
+    </div>
+
+    <div id="reboid" hidden>
+        <div id="Page02" class="Page02_05" hidden>
+            <h5 id="Page2Text" class="SubjectText"></h5>
+        </div>
+        <div id="Page03" class="Page02_05" hidden>
+            <h5 id="Page3Text" class="SubjectText"></h5>
+        </div>
+        <div id="Page04" class="Page02_05" hidden>
+            <h5 id="Page4Text" class="SubjectText"></h5>
+        </div>
+    </div>
+    <div id="Page05" class="Page05_07" hidden>
+        <img src="img/Page5Img1.png" alt="没有" id="Page5Img1" class="Page5Img1" hidden/>
+        <h5 id="Page5Lrc1" class="Lyric" style="top: 40px; left: 800px" hidden></h5>
+        <h5 id="Page5Lrc2" class="Lyric" style="top: 230px; left: 800px" hidden></h5>
+        <img src="img/Page5Img2.png" alt="没有" id="Page5Img2" style="top: 420px; left: 800px; position: absolute" hidden/>
+    </div>
+
+    <div id="Page06" class="Page05_07" hidden>
+        <div id="Page6Lrc1Div" class="Page6Lrc1Div" style="top: 120px; left: 500px; width: 600px; height: 180px; position: absolute; overflow: hidden" hidden>
+            <h5 id="Page6Lrc1" class="Lyric" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute"></h5>
+        </div>
+        <div id="Page6Lrc2" style="top: 330px; left: 560px"  hidden></div>
+        <div id="Page6ArrowDiv" style="top: 300px; left: 1050px; width: 0px; height: 140px; position: absolute; overflow: hidden" hidden>
+            <img src="img/Page6Arrow.png" alt="没有" id="Page6Arrow" class="Page6Arrow" hidden/>
+        </div>
+        <div id="Page6Scroll" class="Page6Scroll" hidden>
+            <img src="img/Page6Img1.png" alt="没有" style="top: 100px; left: 200px; position: absolute; transform: scale(0.8)" />
+            <div id="Page6Lrc3Div" class="Page6Lrc3Div" style="top: 600px; left: 250px; width: 400px; height: 130px; position: absolute">
+                <canvas id="Page6Lrc3Canvas" class="Page6Lrc3Canvas" height="130px" width="400px" style="top: 0; left: 0; position: absolute"></canvas>
+                <h5 id="Page6Lrc3" class="LyricB">括号多写了一行</h5>
+            </div>
+            <img src="img/Page6Img2.png" alt="没有" style="top: 215px; left: 585px; position: absolute; transform: scale(0.66)" />
+            <div id="Page6Lrc4Div" class="Page6Lrc4Div" style="top: 100px; left: 1000px; width: 400px; height: 130px; position: absolute">
+                <canvas id="Page6Lrc4Canvas" class="Page6Lrc4Canvas" height="130px" width="400px" style="top: 0; left: 0; position: absolute"></canvas>
+                <h5 id="Page6Lrc4" class="LyricB">数组越界访问</h5>
+            </div>
+            <img src="img/Page6Img3.png" alt="没有" style="top: -50px; left: 1474px; position: absolute; transform: scale(0.57)" />
+            <div id="Page6Lrc5Div" class="Page6Lrc5Div" style="top: 600px; left: 1900px; width: 400px; height: 130px; position: absolute">
+                <canvas id="Page6Lrc5Canvas" class="Page6Lrc5Canvas" height="130px" width="400px" style="top: 0; left: 0; position: absolute"></canvas>
+                <h5 id="Page6Lrc5" class="LyricB">忘记初始化变量</h5>
+            </div>
+            <img src="img/Page6Img4.png" alt="没有" style="top: 400px; left: 2770px; position: absolute;" />
+            <div id="Page6Lrc6Div" class="Page6Lrc6Div" style="top: 100px; left: 2620px; width: 550px; height: 180px; position: absolute">
+                <canvas id="Page6Lrc6Canvas" class="Page6Lrc6Canvas" height="180px" width="550px" style="top: 0; left: 0; position: absolute"></canvas>
+                <h5 id="Page6Lrc6" class="LyricB"></h5>
+            </div>
+            <img src="img/Page6Img5.png" alt="没有" style="top: 100px; left: 3300px; position: absolute" />
+            <div id="Page6Lrc7Div" class="Page6Lrc7Div" style="top: 600px; left: 3350px; width: 400px; height: 130px; position: absolute">
+                <canvas id="Page6Lrc7Canvas" class="Page6Lrc7Canvas" height="130px" width="400px" style="top: 0; left: 0; position: absolute"></canvas>
+                <h5 id="Page6Lrc7" class="LyricB">参数类型错误</h5>
+            </div>
+            <img src="img/Page6Img6.png" alt="没有" style="top: 320px; left: 3850px; position: absolute" />
+            <div id="Page6Lrc8Div" class="Page6Lrc8Div" style="top: 100px; left: 3900px; width: 400px; height: 180px; position: absolute">
+                <canvas id="Page6Lrc8Canvas" class="Page6Lrc8Canvas" height="180px" width="400px" style="top: 0; left: 0; position: absolute"></canvas>
+                <h5 id="Page6Lrc8" class="LyricB"></h5>
+            </div>
+            <img src="img/Page6Img7.png" alt="没有" style="top: 100px; left: 4400px; position: absolute" />
+            <div id="Page6Lrc9Div" class="Page6Lrc9Div" style="top: 600px; left: 4400px; width: 500px; height: 130px; position: absolute">
+                <canvas id="Page6Lrc9Canvas" class="Page6Lrc9Canvas" height="130px" width="500px" style="top: 0; left: 0; position: absolute"></canvas>
+                <h5 id="Page6Lrc9" class="LyricB">字符串为何变成了烫烫烫</h5>
+            </div>
+        </div>
+        <h5 id="Page6Lrc10" class="Lyric" style="top: 450px; left: 950px" hidden>一次次弹出失败提示框</h5>
+        <h5 id="Page6Lrc11" class="Lyric" style="top: 550px; left: 950px" hidden>一次次将代码回炉重造</h5>
+        <video id="Page6Video" width="720" height="480" style="left: 50px; top: 150px; position: absolute" controls muted autoplay="autoplay" hidden>
+            <source src="video/a.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="Page07" class="Page05_07" hidden>
+        <img id="Page7Img1" src="img/Page7Img1.png" alt="没有" style="top: -100px; left: -800px; position: absolute; transform: scale(0.6)" hidden/>
+        <img id="Page7Img2" src="img/Page7Img2.jpg" alt="没有" style="top: 130px; left: 100%; position: absolute; transform: scale(1.4)" hidden/>
+        <h5 id="Page7Lrc1" class="Lyric" style="top: 550px; left: -500px" hidden>错误信息显示在屏幕上</h5>
+        <h5 id="Page7Lrc2" class="Lyric" style="top: 550px; left: 100%" hidden>对面的人陷入迷茫</h5>
+    </div>
+
+    <div id="Page08" class="Page02_05" hidden>
+        <h5 id="Page8Text" class="SubjectText"></h5>
+    </div>
+</body>
+
+<script src="js/interface.js"></script>
+<script src="js/timeAxis.js"></script>
+
+</html>

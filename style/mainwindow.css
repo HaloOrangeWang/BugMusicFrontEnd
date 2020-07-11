@@ -1,0 +1,226 @@
+html, body{
+    margin-left: 0;
+    margin-top: 0;
+}
+
+/* 标题的背景 */
+.Page01 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/background1.PNG");
+    background-size: 100% 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+/*题目*/
+.TitleText {
+    top: 500px;
+    left: 100px;
+    position: absolute;
+    width: 1300px;
+    font-size: 72px;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: 1px deepskyblue;
+    /*border: 4px solid red;*/
+    /*stroke: aqua;*/
+    font-family: 宋体;
+}
+
+/*首页的四张图片*/
+.Page1Img1 {
+    top: 100px;
+    left: 200px;
+    position: absolute;
+}
+
+/*首页的四张图片*/
+.Page1Img1 {
+    top: 40px;
+    left: 200px;
+    position: absolute;
+}
+.Page1Img2 {
+    top: 40px;
+    left: 650px;
+    position: absolute;
+}
+.Page1Img3 {
+    top: 300px;
+    left: 750px;
+    position: absolute;
+}
+.Page1Img4 {
+    top: 450px;
+    left: 100px;
+    position: absolute;
+}
+
+#reboid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    perspective: 1200px;
+}
+
+/* 第2-4页的背景 */
+.Page02_05 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/background2.PNG");
+    background-size: 100% 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+/* 第2-4页的文字 */
+.SubjectText {
+    top: 400px;
+    left: 150px;
+    position: absolute;
+    width: 1000px;
+    height: 500px;
+    font-size: 48px;
+    font-weight: 400;
+    color: black;
+    font-family: 宋体;
+    white-space: pre;
+    line-height: 1.2;
+}
+
+/* 第五页到第七页的背景 */
+.Page05_07 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+/*词的样式*/
+.Lyric {
+    font-size: 40px;
+    font-weight: lighter;
+    color: black;
+    position: absolute;
+    font-family: 等线;
+    white-space: pre;
+    line-height: 1.2;
+}
+
+/*第五页的插图*/
+.Page5Img1 {
+    width: 768px;  /*缩放0.7倍*/
+    height: 1326px;
+    position: absolute;
+    /*overflow: hidden;*/
+}
+
+/*第六页的艺术字*/
+#Page6Lrc2 {
+    font-size: 72px;
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    color: #666666;
+    font-family: "华文行楷";
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #000,-1px -1px 1px #fff;
+}
+
+/* 第六页右侧的卷轴 */
+.Page6Scroll {
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 5000px;
+    border: 3px solid black;
+    position: absolute;
+    background-color: greenyellow;
+}
+
+/* 第六页的第二段词的样式 */
+.LyricB {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 32px;
+    font-weight: bolder;
+    color: black;
+    position: absolute;
+    font-family: 楷体;
+    text-align: center;
+    white-space: pre;
+    line-height: 1.2;
+}
+
+/* 立方体式旋转 */
+.rotateCubeLeftOut {
+    transform-origin: 100% 50%;
+    animation: rotateCubeLeftOut 1s both ease-in;
+}
+.rotateCubeLeftIn {
+    transform-origin: 0% 50%;
+    animation: rotateCubeLeftIn 1s both ease-in;
+}
+@keyframes rotateCubeLeftOut {
+    50% { animation-timing-function: ease-out; transform: translateX(-50%) rotateY(-45deg); }
+    100% { transform: translateX(-100%) rotateY(-90deg); }
+}
+@keyframes rotateCubeLeftIn {
+    0% { transform: translateX(100%) rotateY(90deg); }
+    50% { animation-timing-function: ease-out; transform: translateX(50%) rotateY(45deg); }
+}
+
+/*向下退出的动画*/
+.BottomOut {
+    animation: BottomOut2 0.5s both;
+}
+.BottomIn {
+    animation: BottomIn2 0.5s both;
+}
+@keyframes BottomOut2 {
+    0% {animation-timing-function: linear; transform: translateY(0%);}
+    100% {transform: translateY(100%);}
+}
+@keyframes BottomIn2 {
+    0% {animation-timing-function: linear; transform: translateY(-100%);}
+    100% {transform: translateY(0%);}
+}
+
+/*向上退出的动画*/
+.TopOut {
+    animation: TopOut2 1s both;
+}
+.TopIn {
+    animation: TopIn2 1s both;
+}
+@keyframes TopOut2 {
+    0% {animation-timing-function: linear; transform: translateY(0%);}
+    100% {transform: translateY(-100%);}
+}
+@keyframes TopIn2 {
+    0% {animation-timing-function: linear; transform: translateY(100%);}
+    100% {transform: translateY(0%);}
+}
+
+/*模仿PPT“挥鞭式”进入的动画*/
+.Huibian {
+    animation: Huibian2 0.5s;
+}
+@keyframes Huibian2 {
+    0% { animation-timing-function: linear; opacity: 0.1; transform: translateX(20px); }
+    20% { animation-timing-function: ease-out; opacity: 0.4; transform: translateX(60px); }
+    45% { animation-timing-function: ease-in; opacity: 1; transform: translateX(85px); }
+    70% { animation-timing-function: linear; transform: translateX(60px); }
+    100% { transform: translateX(0px); }
+}
